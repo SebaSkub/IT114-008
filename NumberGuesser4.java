@@ -106,9 +106,10 @@ public class NumberGuesser4 {
         //TODO add other conditions here
 
 
+        
         return processed;
     }
-
+    
     private void lose() {
         System.out.println("Uh oh, looks like you need to get some more practice.");
         System.out.println("The correct number was " + number);
@@ -119,7 +120,10 @@ public class NumberGuesser4 {
             level = 1;
         }
     }
-
+/**
+ * This code display's a hint after each guess either for you to guess higher or lower.
+ * @param guess
+ */
     private void processGuess(int guess) {
         if (guess < 0) {
             return;
@@ -144,21 +148,27 @@ public class NumberGuesser4 {
                 }
             }
         }
-    
-        private void changeDifficultyLevel(boolean increase){
-            if (increase) {
-                if (maxStrikes > 1){
-                    maxStrikes--;
-                    System.out.println("Be Advised your difficulty level has now been increased. (Max Strikes = " + maxStrikes + ")");
-                }
-            }else{
-                if (maxStrikes < 6){
-                    maxStrikes++;
-                    System.out.println("Be Advised your difficulty level has now been decreased. (Max Strikes = " + maxStrikes + ")");
-                }
+        //Feburary 13 
+        //ucid:ss365
+        //implemented a higher or lower hint after a wrong guess.
+    /**
+     * This code either increases or decreases the diffuculty by changing max strikes.
+     * @param increase
+     */
+    private void changeDifficultyLevel(boolean increase){
+        if (increase) {
+            if (maxStrikes > 1){
+                maxStrikes--;
+                System.out.println("Be Advised your difficulty level has now been increased. (Max Strikes = " + maxStrikes + ")");
+            }
+        }else{
+            if (maxStrikes < 6){
+                maxStrikes++;
+                System.out.println("Be Advised your difficulty level has now been decreased. (Max Strikes = " + maxStrikes + ")");
             }
         }
-    
+    }
+    //Feburary 13, ss365, implemented a difficulty selector that adjusts the max strikes per level.
 
     private int strToNum(String message) {
         int guess = -1;
