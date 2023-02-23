@@ -1,4 +1,4 @@
-package Part3HW;
+package Part3HW.Part3HW;
 
 import java.io.IOException;
 import java.net.ServerSocket;
