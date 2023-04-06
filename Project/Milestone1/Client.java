@@ -194,7 +194,7 @@ public class Client {
                     while (!server.isClosed() && !server.isInputShutdown()
                             && (fromServer = (Payload) in.readObject()) != null) {
 
-                        System.out.println("Debug Info: " + fromServer);
+                        //System.out.println("Debug Info: " + fromServer);
                         processMessage(fromServer);
 
                     }
